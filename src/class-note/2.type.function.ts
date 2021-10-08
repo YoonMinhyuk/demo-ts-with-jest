@@ -14,3 +14,11 @@ function getNumber(): number {
 function add(a: number, b: number): number {
     return a + b
 }
+
+// optional parameters
+function log(message?: string) {
+    console.log(message ?? "")
+}
+
+log()
+log("aaa")
