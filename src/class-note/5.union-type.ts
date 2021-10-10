@@ -6,7 +6,8 @@ logMessage1('hello')
 // logMessage1(100) // error
 
 /*
-*  '|' 연산자를 사용하여 타입을 여러개 늘려줄 수 있음. 이런 것을 가리켜 Union Type 이라고 함.
+*  '|' 연산자를 사용하여 2개 이상의 타입을 묶는 것.
+*  '|' 로 묶여진 타입중 1개만 만족하면 된다.
 * */
 function logMessage2(value: string | number) {
     // typeof => type guard
