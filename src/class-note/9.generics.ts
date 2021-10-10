@@ -48,3 +48,36 @@ class GenericInterfaceImpl implements GenericInterface<string> {
 
 console.log(new GenericInterfaceImpl().getName())
 
+// 타입 제한
+interface LengthType {
+    length: number
+}
+
+function toLength<T extends LengthType>(value: T): number {
+    return value.length
+}
+
+console.log(toLength('a'))
+
+interface ShoppingItem {
+    name: string
+    price: number
+    stock: number
+}
+
+
+// keyof
+// ShoppingItem 의 key 값만이 option parameter 로 전달될 수 있다.
+function getShoppingItemOption<T extends keyof ShoppingItem>(option: T): T {
+    return option
+}
+
+const item: ShoppingItem = {
+    name: 'name',
+    price: 100,
+    stock: 10
+}
+
+getShoppingItemOption("name")
+getShoppingItemOption("price")
+getShoppingItemOption("stock")
