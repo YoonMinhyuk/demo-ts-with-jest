@@ -4,19 +4,21 @@
 * type 은 extends(확장) 불가능.
 * type 보다는 interface 사용을 권장. (공식문서도 권장하고 있음. 좋은 소프트웨어는 언제나 확장이 용이해야한다는 원칙!)
 * */
-type MyString = string
+namespace Interface {
+    type MyString = string
 
 // interface Person {
 //     name: String
 //     age: number
 // }
 
-type Person = {
-    name: String
-    age: number
-}
+    type Person = {
+        name: String
+        age: number
+    }
 
-const person: Person = {
-    name: 'name',
-    age: 10
+    const person: Person = {
+        name: 'name',
+        age: 10
+    }
 }
