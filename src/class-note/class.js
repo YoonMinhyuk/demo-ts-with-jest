@@ -1,3 +1,18 @@
+// js 생성자 함수 => 이것이 class 로 바뀐것
+// @ts-ignore
+// function Person(name, age) {
+//     // @ts-ignore
+//     this.name = name;
+//     // @ts-ignore
+//     this.age = age
+//
+//     this.getName = () => {
+//
+//     }
+// }
+// new Person('z', 10).getName()
+
+
 // ES2015 (ES6) 에 추가됌
 class Person {
     // @ts-ignore
