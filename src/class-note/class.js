@@ -2,12 +2,17 @@
 class Person {
     // @ts-ignore
     constructor(name, age) {
+        // @ts-ignore
         this.name = name;
+
+        // @ts-ignore
         this.age = age
     }
 }
 
+// @ts-ignore
 const person = new Person('zz', 10);
+
 console.log(person)
 
 // js prototype
