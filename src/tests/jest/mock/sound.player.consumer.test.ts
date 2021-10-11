@@ -15,7 +15,7 @@ test('Hmm', () => {
     mock.mockReturnValue("Really?")
     jest.spyOn(GG.SoundPlayer.prototype, "getName").mockImplementation(mock)
 
-    // const mockedSoundPlayer = mocked(SoundPlayer, true);
+    // const mockedSoundPlayer = mocked(GG.SoundPlayer, true);
     // mockedSoundPlayer.mockImplementation(() => {
     //     return {
     //         getName: () => "MOCK!!!!"

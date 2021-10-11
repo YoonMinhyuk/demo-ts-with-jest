@@ -7,6 +7,11 @@
     "checkJs": true,
     "target": "ES6",
     "noImplicitAny": true,
-    "strict": true
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true
   }
 }
