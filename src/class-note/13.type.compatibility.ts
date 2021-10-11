@@ -37,5 +37,49 @@ class IronMan2 {
 // const hero2: Hero2 = new IronMan2()
 
 // ok
-const ironMan2 : IronMan = new Hero2()
+const ironMan2: IronMan = new Hero2()
+
+
+// 함수 타입 호환
+let addFunc = function (a: number) {
+
+}
+
+let sumFunc = function (a: number, b: number) {
+
+}
+
+// ok
+sumFunc = addFunc
+
+// error
+// addFunc = sumFunc
+
+// generic 타입 호환
+interface Empty<T> {
+
+}
+
+let empty1: Empty<string> = {}
+
+let empty2: Empty<number> = {}
+// ok 타입이 달라도 구조적으로 내용물이 동일
+empty1 = empty2
+
+// ok 타입이 달라도 구조적으로 내용물이 동일
+empty2 = empty1
+
+
+interface NotEmpty<T> {
+    data: T
+}
+
+let notEmpty1: NotEmpty<string> = {data: 'data'}
+let notEmpty2: NotEmpty<number> = {data: 1}
+
+// error 구조적으로 data 의 타입이 달라지므로 허용 X
+// notEmpty1 = notEmpty2
+
+// error 구조적으로 data 의 타입이 달라지므로 허용 X
+// notEmpty2 = notEmpty1
 
